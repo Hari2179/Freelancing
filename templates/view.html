@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.title }} - Freelance Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-left">
+            <h1>Freelance Hub</h1>
+        </div>
+        <div class="header-right">
+           
+        </div>
+    </header>
+
+    
+    
+
+    <!-- Main Content -->
+    <main class="content">
+        <div class="project-details">
+            <h1 class="project-title">{{ project.title }}</h1>
+            <div class="project-info">
+                <p><strong>Description:</strong> <span>{{ project.Description }}</span></p>
+                <p><strong>Timeline:</strong> <span>{{ project.timeline }}</span></p>
+                <p><strong>Cost:</strong> <span>${{ project.cost }}</span></p>
+                <p><strong>Domain:</strong> <span>{{ project.domain }}</span></p>
+                <p><strong>Status:</strong> <span class="status">{{ project.status }}</span></p>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="buttons">
+                <a href="javascript:history.back()" class="btn back">🔙 Back</a>
+                <a href="/enroll/{{project.project_id}}" class="btn enroll"> Enroll</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Freelance Hub</p>
+    </footer>
+
+</body>
+</html>
